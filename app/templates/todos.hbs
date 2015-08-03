@@ -3,10 +3,14 @@
 <section id="main">
   <ul id="todo-list">
     {{#each todo in model}}
-      {{todo-item acceptChanges="acceptChanges" deleteToDo="deleteToDo" todo=todo}}
+      {{todo-item acceptChanges="acceptChanges" deleteTodo="deleteTodo" todo=todo}}
     {{/each}}
   </ul>
+
+  <input type="checkbox" id="toggle-all">
 </section>
+
+{{outlet}}
 
 <footer id="footer">
   <span id="todo-count">
@@ -20,11 +24,11 @@
       <a href="active">Active</a>
     </li>
     <li>
-      <a href="cpmleted">Completed</a>
+      <a href="completed">Completed</a>
     </li>
-  </ul>
+  </ul>√
 
   <button id="clear-completed">
-    Clear completed(1)
+    Clear completed (1)
   </button>
 </footer>
